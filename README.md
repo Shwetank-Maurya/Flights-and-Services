@@ -14,7 +14,7 @@ PORT=3000
 ```
 - Inside the src/config folder, create a file named config.json and add:
 
-```
+```bash
 JSON
 
 {
@@ -28,8 +28,11 @@ JSON
 }
 ```
 
-```
-- Once You've added your db config as listed above, go to the src folder from your terminal and execute `npx- seuelize db:create`
+```bash
+- Once You've added your db config as listed above, go to the src folder from your terminal and execute `npx seuelize db:create`
+and then execute
+
+` npx sequelize db:migrate`
 ```
 
 ## DB Design
