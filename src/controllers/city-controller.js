@@ -33,7 +33,7 @@ const destroy = async ( req, res) => {
         return res.status(200).json({
             data:response,
             success: true,
-            message: 'Successfully created a city',
+            message: 'Successfully deleted a city',
             err: {}
         });
     } catch (error) {
@@ -47,11 +47,11 @@ const destroy = async ( req, res) => {
     }
 }   
 
-const get = async ( req, res) => {
+const get = async (req, res) => {
     try {
         const response = await cityService.getCity(req.params.id);
         return res.status(200).json({
-            data:response,
+            data: response,
             success: true,
             message: 'Successfully fetched a city',
             err: {}
@@ -59,11 +59,11 @@ const get = async ( req, res) => {
     } catch (error) {
         console.log(error);
         return res.status(500).json({
-            data:{},
-            success:false,
-            message:"Not able to get the city",
+            data: {},
+            success: false,
+            message: 'Not able to get the city',
             err: error
-        })
+        });
     }
 }
 
