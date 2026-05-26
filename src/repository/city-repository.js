@@ -1,10 +1,12 @@
-const { where } = require('sequelize');
+// const { where } = require('sequelize');
 const { City } = require('../models/index');
 
 class CityRepository {
     async createCity({ name }) {
         try{
-            const city = await City.create({name});
+            const city = await City.create({
+                name
+            });
             return city;
         } catch (error) {
             throw {error};
@@ -56,6 +58,17 @@ class CityRepository {
             throw{error};
         }
     }
+
+    async getAllCities(){
+        try {
+            const cities = await City.findAll();
+            return cities;
+        } catch (error) {
+            console.log("SOmething went wrong in the reepository layer");
+            throw {error};
+        }
+    }
 }
+
 
 module.exports = CityRepository;
