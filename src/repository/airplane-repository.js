@@ -1,4 +1,4 @@
-const {Airplane} = require('../models/index');
+const { Airplane } = require('../models/index');
 
 class AirplaneRepository {
     async getAirplane(id) {

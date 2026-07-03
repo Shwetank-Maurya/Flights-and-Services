@@ -9,7 +9,7 @@ const ServerErrorCodes = Object.freeze({
     NOT_IMPLEMENTED: 501,
 });
 
-const SuccessCodes = Object.freeze({
+const SuccessCodes = Object.freeze({ // this is not updated throughout the program
     OK: 200,
     CREATED:201
 });
